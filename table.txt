@@ -1,0 +1,28 @@
+USE [clentside]
+GO
+
+/****** Object:  Table [dbo].[projects]    Script Date: 17/05/2021 00:15:57 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[projects](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[projectname] [varchar](50) NOT NULL,
+	[wbscode] [varchar](50) NOT NULL,
+	[clientname] [varchar](50) NOT NULL,
+	[clientemail] [varchar](50) NOT NULL,
+	[requestorname] [varchar](50) NOT NULL,
+	[requestoremail] [varchar](50) NOT NULL,
+	[los] [int] NOT NULL,
+	[territory] [int] NOT NULL,
+	[service] [int] NOT NULL,
+	[requirement] [text] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
